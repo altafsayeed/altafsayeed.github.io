@@ -11,21 +11,27 @@ export const Projects = () => {
       title: "Jobify",
       description: "Full-stack (MERN) job application tracker app",
       imgUrl: projImg1,
+      url: "https://jobify-m7vk.onrender.com/",
+      github: "https://github.com/altafsayeed/job-tracker-app",
     },
     {
       title: "UBus",
       description:
         "Full-stack (MERN) bus ticketing app with payment integration using Stripe",
       imgUrl: projImg2,
+      url: "https://ubus-app.herokuapp.com/",
+      github: "https://github.com/altafsayeed/bus-ticketing-app",
     },
     {
       title: "CarBuildz",
       description: "Full-stack (MERN) social media app for car enthusiasts",
       imgUrl: projImg3,
+      url: "https://carbuildz.onrender.com/",
+      github: "https://github.com/altafsayeed/CarBuildz",
     },
   ];
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>

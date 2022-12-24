@@ -38,12 +38,16 @@ export const Skills = () => {
           <Col>
             <div className="skill-bx">
               <h2>Skills</h2>
-              <p> Lorem ipsum blah blah blah</p>
+              <p>
+                I can work with the following languages and frameworks. <br />
+                I'm always open to learn new ones as well.
+              </p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="skill-slider"
               >
+                {/*SKILLS TO ADD: MONGODB, EXPRESS, GIT */}
                 <div className="item">
                   <img src={js} alt="javascript" />
                   <h5>JavaScript</h5>
