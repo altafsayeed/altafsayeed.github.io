@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/banner8.svg";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -53,21 +55,31 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1 className="intro">
-              {`Hi, I'm Altaf`} <p></p>
-              <span className="wrap">💻 {text}</span>
-            </h1>
-            <p className="para">
-              I'm currently seeking internships and full-time positions. Check
-              out my skills and projects below!
-            </p>
-            <button
-              className="lets-connect"
-              onClick={() => console.log("connect")}
-            >
-              Let's connect <ArrowRightCircle size={25} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__jackInTheBox" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1 className="intro">
+                    {`Hi, I'm Altaf`} <p></p>
+                    <span className="wrap">💻 {text}</span>
+                  </h1>
+                  <p className="para">
+                    I'm currently seeking internships and full-time positions.
+                    Check out my skills and projects below!
+                  </p>
+                  <button
+                    className="lets-connect"
+                    onClick={() => console.log("connect")}
+                  >
+                    Let's connect <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col align="center" xs={12} md={6} xl={5}>
             <img className="header-img" src={headerImg} alt="Header Img" />

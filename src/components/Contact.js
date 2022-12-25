@@ -104,7 +104,7 @@ export const Contact = () => {
                     name="message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   />
-                  <button type="submit">
+                  <button className="send-btn" type="submit">
                     <span>{buttonText}</span>
                   </button>
                 </Col>

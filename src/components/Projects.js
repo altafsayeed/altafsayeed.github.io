@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/jobify.png";
 import projImg2 from "../assets/img/ubus.png";
 import projImg3 from "../assets/img/carbuildz.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projects = [
@@ -35,19 +36,29 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p>Have a look at some of my projects.</p>
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Tab.Content>
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                  </Row>
-                </Tab.Pane>
-              </Tab.Content>
-            </Tab.Container>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div>
+                  <h2>Projects</h2>
+                  <p>
+                    Have a look at some of my projects. Please note that it may
+                    take up to 30 seconds for the website to load since I am
+                    using Render's free tier.
+                  </p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Tab.Content>
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>

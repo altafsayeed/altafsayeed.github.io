@@ -320,6 +320,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+.contact img {
+  animation: updown 3s linear infinite;
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 60px 0;
@@ -331,6 +335,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
 }
+
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
@@ -365,6 +370,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   background-color: black;
 }
+
 .project h2 {
   font-size: 45px;
   font-weight: 700;
@@ -377,7 +383,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 50%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -444,6 +450,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
 }
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
@@ -505,7 +512,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background-image: url("./assets/img/3160.jpg");
+  background-size: contain;
+  /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -553,16 +562,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
+  border-radius: 20px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
 .contact form button span {
   z-index: 1;
   position: relative;
+  border-radius: 20px;
 }
 .contact form button:hover {
   color: #fff;
+  border-radius: 20px;
 }
 .contact form button::before {
   content: "";
@@ -574,14 +585,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   z-index: 0;
   transition: 0.3s ease-in-out;
+  border-radius: 20px;
 }
 .contact form button:hover::before {
   width: 100%;
+  border-radius: 20px;
 }
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 50px 0;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
@@ -650,6 +663,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer img {
   width: 26%;
 }
+
+.navbar img {
+  width: 180px;
+}
 .footer p {
   font-weight: 400;
   font-size: 14px;
@@ -679,5 +696,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   div.skill-bx {
     margin-top: 0;
+  }
+
+  section.contact {
+    background-size: cover;
+    background-position: 25%;
+  }
+
+  .project p {
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 130px;
+  }
+
+  .footer img {
+    width: 130px;
   }
 }
