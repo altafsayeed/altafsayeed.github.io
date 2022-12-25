@@ -1,8 +1,35 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setButtonText("Sending...");
+
+    emailjs
+      .sendForm(
+        "service_b0p6qhl",
+        "template_2k0hyr9",
+        form.current,
+        "a0imbebfxIgtc6gcd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus({ success: true, message: "Message sent successfully!" });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setButtonText("Send");
+    setFormDetails(formInitialDetails);
+  };
+
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -22,8 +49,6 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = () => {};
-
   return (
     <section className="contact" id="connect">
       <Container>
@@ -33,13 +58,14 @@ export const Contact = () => {
           </Col>
           <Col md={6}>
             <h2>Get In Touch</h2>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <Row>
                 <Col sm={6} className="px-1">
                   <input
                     type="text"
                     value={formDetails.firstName}
                     placeholder="First Name"
+                    name="firstName"
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
                   />
                 </Col>
@@ -48,6 +74,7 @@ export const Contact = () => {
                     type="text"
                     value={formDetails.lastName}
                     placeholder="Last Name"
+                    name="lastName"
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
                   />
                 </Col>
@@ -56,6 +83,7 @@ export const Contact = () => {
                     type="email"
                     value={formDetails.email}
                     placeholder="Email Address"
+                    name="email"
                     onChange={(e) => onFormUpdate("email", e.target.value)}
                   />
                 </Col>
@@ -64,6 +92,7 @@ export const Contact = () => {
                     type="tel"
                     value={formDetails.phone}
                     placeholder="Phone number"
+                    name="phone"
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
                   />
                 </Col>
@@ -72,6 +101,7 @@ export const Contact = () => {
                     row="6"
                     value={formDetails.message}
                     placeholder="Message"
+                    name="message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   />
                   <button type="submit">

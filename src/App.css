@@ -87,6 +87,8 @@ select:focus {
 
 p.success {
   color: green;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 p.danger {
@@ -491,7 +493,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project-link {
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 19px;
   text-decoration: none;
@@ -499,7 +501,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-link:hover {
-  color: white;
+  color: black;
 }
 
 .contact {
