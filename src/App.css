@@ -103,6 +103,7 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
@@ -111,7 +112,6 @@ nav.navbar a.navbar-brand {
   width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
@@ -123,6 +123,16 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
 
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: white !important;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
 span.navbar-text {
   display: flex;
   align-items: center;
@@ -132,8 +142,8 @@ span.navbar-text {
   margin-left: 14px;
 }
 .social-icon a {
-  width: 42px;
-  height: 42px;
+  width: 55px;
+  height: 55px;
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
@@ -141,7 +151,7 @@ span.navbar-text {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
 }
 .social-icon a::before {
   content: "";
@@ -154,17 +164,33 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
-  transform: scale(1);
+  transform: scale(1.3);
 }
+
+.social-icon a.github-logo::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icon a.github-logo:hover::before {
+  transform: scale(1.3);
+}
+
 .social-icon a img {
-  width: 40%;
+  width: 60%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
+
+/* .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
     hue-rotate(346deg) brightness(95%) contrast(86%);
-}
+} */
 .navbar-text button {
   font-weight: 700;
   color: #fff;
@@ -713,5 +739,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .footer img {
     width: 130px;
+  }
+}
+
+@media screen and (min-width: 820px), screen and (min-width: 820px) {
+  .me-auto {
+    margin-left: 275px;
   }
 }

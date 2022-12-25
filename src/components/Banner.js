@@ -71,12 +71,6 @@ export const Banner = () => {
                     I'm currently seeking internships and full-time positions.
                     Check out my skills and projects below!
                   </p>
-                  <button
-                    className="lets-connect"
-                    onClick={() => console.log("connect")}
-                  >
-                    Let's connect <ArrowRightCircle size={25} />
-                  </button>
                 </div>
               )}
             </TrackVisibility>

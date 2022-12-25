@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
-import linkedInLogo from "../assets/img/linkedin.svg";
-import githubLogo from "../assets/img/github.svg";
+import linkedInLogo from "../assets/img/linkedin.png";
+import githubLogo from "../assets/img/github2.png";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -28,8 +28,8 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
-          <img src={logo} alt="Logo" />
+        <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink("home")}>
+          <img className="navbar-logo" src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -63,21 +63,39 @@ const NavBar = () => {
             >
               Projects
             </Nav.Link>
+            <Nav.Link
+              href="#connect"
+              className={
+                activeLink === "connect" ? "active-navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("connect")}
+            >
+              Contact
+            </Nav.Link>
+            <Nav.Link
+              href="#resume"
+              className={
+                activeLink === "resume" ? "active-navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("resume")}
+            >
+              Resume
+            </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
               {" "}
-              {/* GET IMAGES FROM GITHUB AND ADD OWN LINKS FOR LINKEDIN AND GITHUB TO HREF*/}
-              <a href="#">
-                <img src={linkedInLogo} alt="" />
+              <a href="https://www.linkedin.com/in/altafsayeed" target="_blank">
+                <img src={linkedInLogo} alt="linkedin" />
               </a>
-              <a href="#">
-                <img src={githubLogo} alt="" />
+              <a
+                href="https://github.com/altafsayeed"
+                target="_blank"
+                className="github-logo"
+              >
+                <img src={githubLogo} alt="github" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
-            </button>
           </span>
         </Navbar.Collapse>
       </Container>
