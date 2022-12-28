@@ -17,7 +17,7 @@ export const ProjectCard = ({
           <h4 className="proj-title">{title}</h4>
           <h6>{description}</h6>
           <h6>Tools used: {tools}</h6>
-          <span>{instructions}</span> <p></p>
+          <p></p>
           <a className="project-link" href={url} target="_blank">
             {title === "CarBuildz" ? "Video Demo" : "Live App"}
           </a>

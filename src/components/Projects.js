@@ -12,8 +12,6 @@ export const Projects = () => {
       title: "Jobify",
       description: "Full-stack job application tracker app",
       tools: "MongoDB, Express, React, Node.js",
-      instructions:
-        "Test account credentials: User: john@gmail.com, Password: john123",
       imgUrl: projImg1,
       url: "https://jobify-m7vk.onrender.com/",
       github: "https://github.com/altafsayeed/job-tracker-app",
@@ -22,15 +20,13 @@ export const Projects = () => {
       title: "UBus",
       description: "Full-stack bus ticketing app with payment integration",
       tools: "MongoDB, Express, React, Redux, Node.js, Stripe",
-      instructions:
-        "Test account credentials: User: john@gmail.com, Password: john123",
       imgUrl: projImg2,
       url: "https://ubus-app.herokuapp.com/",
       github: "https://github.com/altafsayeed/bus-ticketing-app",
     },
     {
       title: "CarBuildz",
-      description: "Full-stack (MERN) social media app for car enthusiasts",
+      description: "Full-stack social media app for car enthusiasts",
       tools: "MongoDB, Express, React, Redux, Node.js",
       imgUrl: projImg3,
       url: "https://carbuildz.onrender.com/",
@@ -47,9 +43,11 @@ export const Projects = () => {
                 <div>
                   <h2>Projects</h2>
                   <p>
-                    Have a look at some of my projects. Please note that it may
-                    take up to 30 seconds for the website to load since I am
-                    using Render's free tier.
+                    Have a look at some of my projects.{" "}
+                    <b>
+                      Please note that it may take up to 30 seconds for the
+                      website to load since I am using Render's free tier.
+                    </b>
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Tab.Content>

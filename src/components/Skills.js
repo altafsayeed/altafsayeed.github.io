@@ -10,6 +10,9 @@ import cpp from "../assets/img/c++.svg";
 import html from "../assets/img/html.svg";
 import css from "../assets/img/css.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import mongodb from "../assets/img/mongodb.svg";
+import express from "../assets/img/express.svg";
+import git from "../assets/img/git.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -61,6 +64,14 @@ export const Skills = () => {
                   <h5>Node.js</h5>
                 </div>
                 <div className="item">
+                  <img src={mongodb} alt="mongodb" />
+                  <h5>MongoDB</h5>
+                </div>
+                <div className="item">
+                  <img src={express} alt="express" />
+                  <h5>Express.js</h5>
+                </div>
+                <div className="item">
                   <img src={python} alt="python" />
                   <h5>Python</h5>
                 </div>
@@ -79,6 +90,10 @@ export const Skills = () => {
                 <div className="item">
                   <img src={css} alt="css" />
                   <h5>CSS</h5>
+                </div>
+                <div className="item">
+                  <img src={git} alt="git" />
+                  <h5>Git</h5>
                 </div>
               </Carousel>
             </div>
