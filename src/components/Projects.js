@@ -10,15 +10,20 @@ export const Projects = () => {
   const projects = [
     {
       title: "Jobify",
-      description: "Full-stack (MERN) job application tracker app",
+      description: "Full-stack job application tracker app",
+      tools: "MongoDB, Express, React, Node.js",
+      instructions:
+        "Test account credentials: User: john@gmail.com, Password: john123",
       imgUrl: projImg1,
       url: "https://jobify-m7vk.onrender.com/",
       github: "https://github.com/altafsayeed/job-tracker-app",
     },
     {
       title: "UBus",
-      description:
-        "Full-stack (MERN) bus ticketing app with payment integration using Stripe",
+      description: "Full-stack bus ticketing app with payment integration",
+      tools: "MongoDB, Express, React, Redux, Node.js, Stripe",
+      instructions:
+        "Test account credentials: User: john@gmail.com, Password: john123",
       imgUrl: projImg2,
       url: "https://ubus-app.herokuapp.com/",
       github: "https://github.com/altafsayeed/bus-ticketing-app",
@@ -26,6 +31,7 @@ export const Projects = () => {
     {
       title: "CarBuildz",
       description: "Full-stack (MERN) social media app for car enthusiasts",
+      tools: "MongoDB, Express, React, Redux, Node.js",
       imgUrl: projImg3,
       url: "https://carbuildz.onrender.com/",
       github: "https://github.com/altafsayeed/CarBuildz",

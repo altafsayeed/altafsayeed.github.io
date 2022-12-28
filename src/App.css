@@ -470,6 +470,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   object-fit: cover;
 }
 
+.proj-title {
+  background: #cfe7fa;
+  background: linear-gradient(90deg, #cfe7fa 0%, #6393c1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
