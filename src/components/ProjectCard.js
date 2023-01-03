@@ -6,7 +6,7 @@ export const ProjectCard = ({
   imgUrl,
   url,
   github,
-  instructions,
+  youtube,
   tools,
 }) => {
   return (
@@ -24,6 +24,10 @@ export const ProjectCard = ({
           <br />
           <a className="project-link" href={github} target="_blank">
             View code
+          </a>
+          <br />
+          <a className="project-link" href={youtube} target="_blank">
+            {title === "CarBuildz" ? "" : "Video Demo"}
           </a>
         </div>
       </div>

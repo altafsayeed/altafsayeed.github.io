@@ -470,6 +470,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   object-fit: cover;
 }
 
+.please-note {
+  color: rgb(64, 211, 125);
+}
+
 .proj-title {
   background: #cfe7fa;
   background: linear-gradient(90deg, #cfe7fa 0%, #6393c1 100%);
@@ -537,7 +541,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: white;
   font-weight: bold;
   font-size: 19px;
-  text-decoration: none;
   transition: 0.3s;
 }
 

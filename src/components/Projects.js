@@ -9,11 +9,12 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
-      title: "Jobify",
-      description: "Full-stack job application tracker app",
+      title: "JobTrak",
+      description: "Full-stack job application manager app",
       tools: "MongoDB, Express, React, Node.js",
       imgUrl: projImg1,
-      url: "https://jobify-m7vk.onrender.com/",
+      url: "https://jobtrak.onrender.com",
+      youtube: "https://youtu.be/Ktpa3NqP7uM",
       github: "https://github.com/altafsayeed/job-tracker-app",
     },
     {
@@ -22,6 +23,7 @@ export const Projects = () => {
       tools: "MongoDB, Express, React, Redux, Node.js, Stripe",
       imgUrl: projImg2,
       url: "https://ubus-app.herokuapp.com/",
+      youtube: "https://youtu.be/PbpLTFn3xqQ",
       github: "https://github.com/altafsayeed/bus-ticketing-app",
     },
     {
@@ -29,7 +31,7 @@ export const Projects = () => {
       description: "Full-stack social media app for car enthusiasts",
       tools: "MongoDB, Express, React, Redux, Node.js",
       imgUrl: projImg3,
-      url: "https://carbuildz.onrender.com/",
+      url: "https://youtu.be/Joo37zl0Mmk",
       github: "https://github.com/altafsayeed/CarBuildz",
     },
   ];
@@ -44,7 +46,7 @@ export const Projects = () => {
                   <h2>Projects</h2>
                   <p>
                     Have a look at some of my projects.{" "}
-                    <b>
+                    <b className="please-note">
                       Please note that it may take up to 30 seconds for the
                       website to load since I am using Render's free tier.
                     </b>
