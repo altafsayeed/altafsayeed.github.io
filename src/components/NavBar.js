@@ -73,7 +73,8 @@ const NavBar = () => {
               Contact
             </Nav.Link>
             <Nav.Link
-              href="#resume"
+              href="AltafSayeedResume.pdf"
+              download
               className={
                 activeLink === "resume" ? "active-navbar-link" : "navbar-link"
               }
