@@ -1,6 +1,6 @@
 import { Col, Container, Row, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/jobify.png";
+import projImg1 from "../assets/img/jobtrak.png";
 import projImg2 from "../assets/img/ubus.png";
 import projImg3 from "../assets/img/carbuildz.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
