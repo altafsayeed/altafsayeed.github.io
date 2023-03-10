@@ -62,7 +62,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__jackInTheBox" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to my Portfolio!</span>
                   <h1 className="intro">
                     {`Hi, I'm Altaf`} <p></p>
                     <span className="wrap">💻 {text}</span>
